@@ -5,7 +5,7 @@ def sum_to(num): # function that takes a single parameter named 'num' to represe
   for n in range(1, num + 1): # for each item that is in the range of 1- 'num' + 1 
     sum += n # as we iterate through the range add the current number to the sum, sum will always be stored as whatever the previous number was added
   return sum # ending the function and determining output 
-# print(sum_to(6))
+print(sum_to(6))
 
 
 # 2. Write a function named largest that takes a list of numbers as an argument and returns the largest number in that list
@@ -33,13 +33,10 @@ occurances('fleep floop', 'e')
 
 # 4. Write a function named product that takes an arbitrary number of numbers, multiplies them all together, and returns the product. HINT: Review your notes on args.
 
-def product(*nums):
-  product = 1
-  for n in nums:
-    product *= n
+def product(*nums): # declare a function named product that accepts an arbitrary number '*' 
+  product = 1 # set product equal to 1, not zero because it will always return zero 
+  for n in nums: # for each element in the list of numbers 
+    product *= n # multiply that current element by product 
   return product 
 
-# function calls 
-# print(largest([1, 2, 3, 4, 0]))
-# print(occurances('fleep floop', 'e')   # returns 2)
-# print(product(-1, 4)) # returns -4
+print(product(-1, 4)) # returns -4
